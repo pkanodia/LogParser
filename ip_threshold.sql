@@ -1,3 +1,7 @@
+CREATE DATABASE log;
+
+USE DATABASE log;
+
 DROP TABLE IF EXISTS ip_threshold;  
 
 
