@@ -8,6 +8,11 @@ goto P:\project-space\LogParser
 
 edit the db.properties with the MYsql credentials and driver details
 
+run the commands from ip_threshold.sql
+the sql scripts created for database named 'Log'
+
+in case u need to change database change the scripts and java code for schema name changes.
+
 sample compile run cmd
 
 javac -classpath P:\project-space\LogParser\commons-cli-1.4.jar;P:\project-space\LogParser\mysql-connector-java-6.0.2.jar; P:\project-space\LogParser\src\com\ef\Parser.java
