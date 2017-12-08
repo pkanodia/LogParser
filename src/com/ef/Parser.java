@@ -15,26 +15,7 @@ import java.util.Properties;
 
 public class Parser {
 
-//    cd P:\project-space\LogParser
-//    p:
-//    C:\Users\kanodiap\AppData\Local\Microsoft\AppV\Client\Integration\2438946D-451F-4C8D-8AF7-9BFE9990B0DB\Root\VFS\ProgramFilesX64\Java\jdk1.8.0_40\bin\java -cp P:\project-space\LogParser\commons-cli-1.4.jar;.\src\ com.ef.Parser --startDate=2017-01-01.15:00:00 --duration=hourly --threshold=200 --input-file=P:\project-space\LogParser\access.logz --config=P:\project-space\LogParser\db.properties
-//    C:\Users\kanodiap\AppData\Local\Microsoft\AppV\Client\Integration\2438946D-451F-4C8D-8AF7-9BFE9990B0DB\Root\VFS\ProgramFilesX64\Java\jdk1.8.0_40\bin\java -cp P:\project-space\LogParser\commons-cli-1.4.jar;.\src\ com.ef.Parser --startDate=2017-01-01.00:00:00 --duration=daily --threshold=500 --input-file=P:\project-space\LogParser\access.log --config=P:\project-space\LogParser\db.properties
-//    C:\Users\kanodiap\AppData\Local\Microsoft\AppV\Client\Integration\2438946D-451F-4C8D-8AF7-9BFE9990B0DB\Root\VFS\ProgramFilesX64\Java\jdk1.8.0_40\bin\javac -classpath P:\project-space\LogParser\commons-cli-1.4.jar;P:\project-space\LogParser\jconn3-jconn3.jar  P:\project-space\LogParser\src\com\ef\Parser.java
-
-
-//    TABLE SPECS
-//    DROP TABLE ip_threshold;
-//    CREATE TABLE ip_threshold(
-//            id INT IDENTITY PRIMARY KEY ,
-//            ip_address VARCHAR(100) NOT NULL,
-//    request_count INT NOT NULL,
-//    comments VARCHAR(500) NOT NULL,
-//    duration_type VARCHAR(20) NOT NULL,
-//    start_date VARCHAR(20) NOT NULL
-//    )
-//    select * from ip_threshold
-
-    private static final String INSERT_SQL = "INSERT INTO ip_threshold"
+    private static final String INSERT_SQL = "INSERT INTO log.ip_threshold"
             + "(ip_address ,request_count ,comments ,duration_type ,start_date) VALUES"
             + "(?,?,?,?,?)";
     private static final String DATE_FORMAT = "yyyy-MM-dd.HH:mm:ss";
@@ -163,7 +144,6 @@ public class Parser {
             }
         }
         preparedStatement.executeBatch();
-        connection.commit();
         long end = System.currentTimeMillis();
         System.out.println(" time taken : " + (end - start));
     }
