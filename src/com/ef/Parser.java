@@ -173,7 +173,7 @@ public class Parser {
         options.addOption(thresholdOption);
         Option inputFileOption = Option.builder().longOpt(INPUT_FILE_CMD_OPTION).required(true).desc("Input File. Valid log file").hasArg().type(File.class).valueSeparator('=').build();
         options.addOption(inputFileOption);
-        Option dbConfigOption = Option.builder().longOpt(DB_PROPERTIES_FILE_CMD_OPTION).required(true).desc("Input File. Valid log file").hasArg().type(File.class).valueSeparator('=').build();
+        Option dbConfigOption = Option.builder().longOpt(DB_PROPERTIES_FILE_CMD_OPTION).required(true).desc("Input File. Valid Db Properties file").hasArg().type(File.class).valueSeparator('=').build();
         options.addOption(dbConfigOption);
         Option helpOption = Option.builder().longOpt(HELP_CMD_OPTION).optionalArg(true).desc("Help").build();
         options.addOption(helpOption);
