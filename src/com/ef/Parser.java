@@ -34,7 +34,7 @@ public class Parser {
 //    )
 //    select * from ip_threshold
 
-    private static final String INSERT_SQL = "INSERT INTO ip_threshold"
+    private static final String INSERT_SQL = "INSERT INTO sql12209702.ip_threshold"
             + "(ip_address ,request_count ,comments ,duration_type ,start_date) VALUES"
             + "(?,?,?,?,?)";
     private static final String DATE_FORMAT = "yyyy-MM-dd.HH:mm:ss";
