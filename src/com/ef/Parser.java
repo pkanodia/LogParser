@@ -15,7 +15,7 @@ import java.util.Properties;
 
 public class Parser {
 
-    private static final String INSERT_SQL = "INSERT INTO log.ip_threshold"
+    private static final String INSERT_SQL = "INSERT INTO Log.ip_threshold"
             + "(ip_address ,request_count ,comments ,duration_type ,start_date) VALUES"
             + "(?,?,?,?,?)";
     private static final String DATE_FORMAT = "yyyy-MM-dd.HH:mm:ss";
